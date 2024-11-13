@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Blog</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <nav class="border-b border-[#bbb] hidden lg:flex">
+            <div class="container-custom mx-auto">
+                <div class="flex items-center gap-7 xl:gap-10 py-4">
+                    <a href="./index.html" alt="#">
+                        <img src="./assets/images/logo.png" alt="Logo" class="max-h-[140px]">
+                    </a>
+                    <ul class="flex gap-5 xl:gap-10 md:text-base text-sm font-medium">
+                        <li>
+                            <a href="#" alt="#" class="block py-4 text-lg hover:text-[#31b13a] duration-200">
+                                Home
+                            </a>
+                        </li>
+                        <li class="relative group">
+                            <a href="#" alt="#" class="block py-4 text-lg hover:text-[#31b13a] duration-200 relative drop-items">
+                                About
+                                <i class="arrow down rotate-45 group-hover:rotate-[225deg] mb-1 ml-1 group-hover:mb-0"></i>
+                            </a>
+                            <ul class="absolute opacity-0 invisible top-[80px] -left-6 px-8 py-5 bg-white drop-shadow-lg border-[1px] rounded-xl transform transition-all duration-300 group-hover:visible group-hover:opacity-100 group-hover:top-[55px]">
+                                <li class="mb-2">
+                                    <a href="#" alt="#" class="text-nowrap text-lg hover:text-[#31b13a] duration-200">
+                                        Terms & Conditions
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" alt="#" class="text-nowrap text-lg hover:text-[#31b13a] duration-200">
+                                        Privacy Policy
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" alt="#" class="block py-4 text-lg hover:text-[#31b13a] duration-200">
+                                Membership
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" alt="#" class="block py-4 text-lg hover:text-[#31b13a] duration-200">
+                                Tags
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" alt="#" class="block py-4 text-lg hover:text-[#31b13a] duration-200">
+                                Authors
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" alt="#" class="block py-4 text-lg hover:text-[#31b13a] duration-200">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="flex gap-6 items-center md:text-base text-sm font-medium ml-auto">
+                        <li>
+                            <div class="border border-transparent hover:border-[#222] rounded-full p-2 duration-200 cursor-pointer">
+                                <img src="./assets/images/moon.svg" alt="dark-mode" class="icon-moon cursor-pointer">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="border border-transparent hover:border-[#222] rounded-full p-2 duration-200 cursor-pointer">
+                                <img src="./assets/images/search.svg" alt="search" class="icon-search">
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" alt="#" class="sing-up border-[1px] border-[#222] px-8 py-1 rounded-3xl text-lg overflow-hidden relative inline-block hover:border-transparent hover:text-white duration-200">
+                                Sing Up
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="mobile lg:hidden">
+            <div class="border-b border-[#bbb] block">
+                <div class="container-custom mx-auto">
+                    <div class="block py-6">
+                        <div class="flex justify-between">
+                            <a href="./index.html" alt="#">
+                                <img src="./assets/images/logo.png" alt="Logo" class="max-h-[140px]">
+                            </a>
+                            <button id="menu-toggle" class="relative">
+                                <div class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-200 origin-center overflow-hidden">
+                                    <div class="line-menu bg-black h-[2px] w-7 transform transition-all duration-200 origin-left"></div>
+                                    <div class="line-menu bg-black h-[2px] w-1/2 rounded transform transition-all duration-200"></div>
+                                    <div class="line-menu bg-black h-[2px] w-7 transform transition-all duration-200 origin-left"></div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div id="menu-mobile" class="absolute overflow-hidden w-full  bg-white shadow-lg transform transition-all duration-200">
+                    <div class="container-custom">
+                        <ul class="flex flex-col gap-2 md:text-base text-sm font-medium py-4">
+                            <li>
+                                <a href="#" alt="#">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="relative dropdown">
+                                <a class="flex items-center hover:text-[#31b13a] duration-200 relative">
+                                    About
+                                    <i class="arrow down ml-auto rotate-45 mb-1"></i>
+                                </a>
+                                <ul class="overflow-hidden px-4 py-0 max-h-0 transform transition-all duration-300">
+                                    <li class="mb-2">
+                                        <a href="#" alt="#" class="text-nowrap hover:text-[#31b13a] duration-200">
+                                            Terms & Conditions
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" alt="#" class="text-nowrap hover:text-[#31b13a] duration-200">
+                                            Privacy Policy
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" alt="#">
+                                    Tags
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" alt="#">
+                                    Authors
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" alt="#">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
